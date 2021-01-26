@@ -1,0 +1,16 @@
+<!--pages/music/music.wxml-->
+<swiper indicator-dots="true" indicator-color="474747" indicator-active-color="#d43c33" autoplay="true"interval="3000" duration="1000" class="swiper">
+  <!--block wx:for="{{imgUrls}} wx:key="index-->
+  <block wx:key="index">
+    <swiper-item wx:for="{{imgUrls}}">
+      <image src="{{item.url}}" class="img" mode="scaleToFill"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<text class="title">场景歌单</text>
+<view class="playlist-container">
+  <block wx:for="{{playlist}}" wx:key="id">
+    <!-- item数据会传入playlist组件中 -->
+    <x-playlist playlist="{{item}}"></x-playlist>
+  </block>
+</view>
