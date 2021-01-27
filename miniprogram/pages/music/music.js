@@ -1,4 +1,7 @@
 // pages/music/music.js
+
+const MAX_LIMIT = 15
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -29,6 +32,7 @@ Page({
       {
         url:'http://p1.music.126.net/j0gp3gBDRRoqIXxAs0v7oA==/109951165664720877.jpg?imageView&quality=89'
       }],
+    //playlist:[]
     playlist: [{
         "id":"1001",
         "playCount":1.4641238e+06,
@@ -67,19 +71,19 @@ Page({
       }
     ]
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this._getPlaylist()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
+  onReady: function (options) {
+  
   },
 
   /**
@@ -120,7 +124,20 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function () {},
+  
+  _getPlaylist(){
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.cloud.callFunction({
+      name:'playlist'
+    }).then((res)=>{
+      console.log(res)
+      this.setData({
+        playlist:res.result
+      })
+      wx.hideLoading()
+    })
+  },
 })
