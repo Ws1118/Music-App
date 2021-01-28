@@ -1,12 +1,14 @@
 <!--components/musiclist/musiclist.wxml-->
-<text>components/musiclist/musiclist.wxml</text>
-<view class='detail-container' style='background: url({{listInfo.coverImgUrl}}) no-repeat  top/cover'></view>
-<view class='detail-mask'></view>
-<view class='detail-info'>
-  <image src="{{listInfo.coverImgUrl}}" class='detail-img'></image>
-  <view class='detail'>
-    <view class='detail-nm'>{{listInfo.name}}</view>
+<block wx:for="{{musiclist}}" wx:key="id">
+  <view class="musiclist-container {{item.id === playingId ? 'playing':''}}" bind:tap="onSelect" data-musicid="{{item.id}}" data-index="{{index}}">
+    <!-- 序号 -->
+    <view class="musiclist-index">{{index+1}}</view>
+    <!-- 歌曲信息容器 -->
+    <view class="misiclist-info">
+      <!-- 歌名 -->
+      <view class="musiclist-name">{{item.name}}</view>
+      <!-- 歌手和别名 -->
+      <view class="musiclist-singer">{{item.ar[0].name}} - {{item.al.name}}</view>
+    </view>
   </view>
-</view>
-
-<x-musiclist musiclist="{{musiclist}}" />
+</block>

@@ -2,7 +2,7 @@
 <swiper indicator-dots="true" indicator-color="474747" indicator-active-color="#d43c33" autoplay="true"interval="3000" duration="1000" class="swiper">
   <!--block wx:for="{{imgUrls}} wx:key="index-->
   <block wx:key="index">
-    <swiper-item wx:for="{{imgUrls}}">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="id">
       <image src="{{item.url}}" class="img" mode="scaleToFill"></image>
     </swiper-item>
   </block>
