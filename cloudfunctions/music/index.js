@@ -14,7 +14,7 @@ const BASE_URL = 'https://musicws.cn1.utools.club'
 // 云函数入口函数
 exports.main = async (event, context) => {
   const app = new TcbRouter({
-    event
+    event,
   })
 
   //歌单列表请求，需要传入url，起始记录索引，请求的记录数，按照创建时间降序排序
@@ -29,11 +29,17 @@ exports.main = async (event, context) => {
       })
   })
   
-  //歌单详情请求，传入歌单id，注意转成int类型
+  //根据歌单id获取歌单详情，注意转成int类型
   app.router('musiclist', async (ctx,next) => {
-    console.log('######' +event.playlistId)
+    console.log('######' + event.playlistId)
     const res = await axios.get(`${BASE_URL}/playlist/detail?id=${parseInt(event.playlistId)}`)
-    console.log('######' +res)
+    console.log('######' + res)
+    ctx.body = res.data
+  })
+
+  //根据歌曲id获取歌曲播放的url
+  app.router('musicUrl', async (ctx, next) => {
+    const res = await axios.get(`${BASE_URL}/song/url?id=${event.musicId}`)
     ctx.body = res.data
   })
   return app.serve()
