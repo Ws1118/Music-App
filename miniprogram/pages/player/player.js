@@ -11,34 +11,32 @@ Page({
    */
   data: {
     picUrl: '',
-    isPlaying:false
+    isPlaying: false,
+    isLyricShow: false,
+    lyric: '传给歌词组件的歌词',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    // console.log(options)
     console.log(options.musicId, typeof (options.musicId))
     playingIndex = options.index
     musiclist = wx.getStorageSync('musiclist')
     this._loadMusicDetail(options.musicId)
   },
 
-  togglePlaying(){
-    this.setData({
-      isPlaying: !this.data.isPlaying
-    })
-  },
-
   _loadMusicDetail(musicId){
     let music = musiclist[playingIndex]
-    console.log(music)
+    // console.log(music)
     wx.setNavigationBarTitle({
       title: music.name,
     })
     this.setData({
-      picUrl: music.al.picUrl
+      picUrl: music.al.picUrl,
+      name: music.name,
+      singer: music.ar[0].name
     })
 
     //请求歌曲播放链接
@@ -53,7 +51,7 @@ Page({
       $url: 'musicUrl'
     }
   }).then((res) => {
-    console.log(res)
+    // console.log(res)
     const url = res.result.data[0].url
     if(url === null){
       wx.showToast({
@@ -73,8 +71,27 @@ Page({
       isPlaying: true
     })
     wx.hideLoading()
+    //请求歌词
+    wx.cloud.callFunction({
+      name: 'music',
+      data: {
+        musicId,
+        $url: 'lyric',
+      }
+    }).then((res) => {
+      console.log(res)
+      let lyric = '暂无歌词'
+      const lrc = res.result.lrc
+      if(lrc){
+        lyric = lrc.lyric
+      }
+      this.setData({
+        lyric
+      })
+    })
   })
 },
+
 togglePlaying() {
   if(this.data.isPlaying){
     backgroundAudioManager.pause()
@@ -84,6 +101,14 @@ togglePlaying() {
   this.setData({
     isPlaying: !this.data.isPlaying
   })
+},
+onLyricShow(){
+  this.setData({
+    isLyricShow: !this.data.isLyricShow
+  })
+},
+timeUpdate(event) {
+  this.selectComponent('.lyric').update(event.detail.currentTime)
 },
 onPrev(){
   playingIndex--
@@ -99,6 +124,7 @@ onNext(){
   }
   this._loadMusicDetail(musiclist[playingIndex].id)
 },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
