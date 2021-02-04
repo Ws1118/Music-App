@@ -1,16 +1,42 @@
 <!--pages/music/music.wxml-->
-<swiper indicator-dots="true" indicator-color="474747" indicator-active-color="#d43c33" autoplay="true"interval="3000" duration="1000" class="swiper">
-  <!--block wx:for="{{imgUrls}} wx:key="index-->
-  <block wx:key="index">
-    <swiper-item wx:for="{{imgUrls}}" wx:key="id">
-      <image src="{{item.url}}" class="img" mode="scaleToFill"></image>
-    </swiper-item>
-  </block>
-</swiper>
-<text class="title">场景歌单</text>
-<view class="playlist-container">
-  <block wx:for="{{playlist}}" wx:key="_id">
-    <!-- item数据会传入playlist组件中 -->
-    <x-playlist playlist="{{item}}"></x-playlist>
-  </block>
+<!-- <view class="custom-navbar-container"> -->
+  <!-- 状态栏占位元素 -->
+  <!-- <view class="custom-status-bar" style="height: {{ statusBarHeight }}px"></view> -->
+  <!-- navigationBar -->
+  <!-- <view class="custom-navbar" style="height: {{ navbarHeight }}px">
+    <text class="iconfont icon-xuanxiang"></text>
+    <text class="custom-title">music</text>
+  </view>
+</view> -->
+<!-- 默认导航 -->
+<view class="header" style="padding-top:{{statusBarHeight + 44}}px;opacity:{{1-opacity}};">
+  <text class="title">{{title}}</text>
+  <input type="text" class="search-input" placeholder="{{placeholder}}" />
 </view>
+<!-- 切换导航 -->
+<view class="header" style="padding-top:{{statusBarHeight + 44}}px;opacity:{{opacity}};">
+  <text class="iconfont icon-xuanxiang"></text>
+  <text class="nav-title">music</text>  
+</view>
+
+<!-- 滚动区域 -->
+<scroll-view scroll-y style="padding-top:{{statusBarHeight + 54}}px">
+  <!-- 轮播 -->
+  <swiper indicator-dots="true" indicator-active-color="#d43c33" autoplay="true" interval="3000" duration="1000" 
+  circular="true" class="swiper" style="margin-top:{{statusBarHeight +44+8}}px;">
+    <!--block wx:for="{{imgUrls}} wx:key="index-->
+    <block wx:for="{{imgUrls}}" wx:key="url">
+      <swiper-item>
+        <image src="{{item.url}}" class="img" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 歌单列表 -->
+  <!-- <text class="title">场景歌单</text> -->
+  <view class="playlist-container">
+    <block wx:for="{{playlist}}" wx:key="_id">
+      <!-- item数据会传入playlist组件中 -->
+      <x-playlist playlist="{{item}}"></x-playlist>
+    </block>
+  </view>
+</scroll-view>
