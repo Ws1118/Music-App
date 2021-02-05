@@ -13,7 +13,11 @@ page {
 .search-input {
   width: 60%;
   position: absolute;
+<<<<<<< HEAD
   left: 60rpx;
+=======
+  left: 30rpx;
+>>>>>>> 6a3d2d857938fd742ec16a6fc7b2128084692bce
   bottom: 6px;
   background-color: #f6f6f6;
   color: #484749;
@@ -24,6 +28,7 @@ page {
 }
 .icon-xuanxiang {
   position: absolute;
+<<<<<<< HEAD
   left: 25rpx;
   bottom: 6px;
   font-size: 32px;
@@ -39,6 +44,15 @@ page {
 .swiper{
   position: relative;
   margin-bottom: 0rpx;
+=======
+  left: 30rpx;
+  bottom: 6px;
+  font-size: 22px;
+  color: #f6f6f6;
+}
+.swiper{
+  margin-top: 130rpx;
+>>>>>>> 6a3d2d857938fd742ec16a6fc7b2128084692bce
   height: 340rpx;
 }
 .img{

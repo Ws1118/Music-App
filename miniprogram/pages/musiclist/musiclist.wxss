@@ -24,7 +24,11 @@
 /* 返回箭头 */
 .icon-ic_return {
   position: absolute;
+<<<<<<< HEAD
   left: 25rpx;
+=======
+  left: 20rpx;
+>>>>>>> 6a3d2d857938fd742ec16a6fc7b2128084692bce
   top: 96rpx;
   font-size: 32px;
   color: #fff;
