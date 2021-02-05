@@ -53,14 +53,33 @@
     "miniprogram": {
       "list": [
         {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide",
-          "query": ""
+          "name": "find",
+          "pathName": "pages/find/find",
+          "query": "",
+          "scene": null
         },
         {
           "name": "test",
           "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "musiclist",
+          "pathName": "pages/musiclist/musiclist",
+          "query": "playlistId=718169090",
+          "scene": null
+        },
+        {
+          "name": "player",
+          "pathName": "pages/player/player",
+          "query": "musicId=436487178&index=0",
+          "scene": null
+        },
+        {
+          "name": "profile",
+          "pathName": "pages/profile/profile",
+          "query": "",
           "scene": null
         }
       ]
