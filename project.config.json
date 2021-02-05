@@ -81,6 +81,12 @@
           "pathName": "pages/profile/profile",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "publish",
+          "pathName": "pages/publish/publish",
+          "query": "",
+          "scene": null
         }
       ]
     }

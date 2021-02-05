@@ -1,4 +1,5 @@
-<!--pages/profile/profile.wxml-->
+<navigation showIcon='{{false}}' isTransparent='{{true}}' title='我的'></navigation>
+
 <view class='container '> 
   <view bindtap="bindViewTap" class="userinfo">  
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"/>  
