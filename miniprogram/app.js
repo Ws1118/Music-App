@@ -61,10 +61,10 @@ App({
     return sysInfo
   },
 
-  onShow(options){
-    console.log('onShow 执行')
-    console.log(options)
-  },
+  // onShow(options){
+  //   console.log('onShow 执行')
+  //   console.log(options)
+  // },
      
   getUserInfo: function (cb) {
     var that = this

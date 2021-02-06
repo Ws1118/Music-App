@@ -3,14 +3,28 @@
 <!-- 留出顶部状态栏高度 -->
 <view style="padding-top:{{contentOffset ? statusBarHeight + 44 : 0}}px;">
   <view class='navigation status-bar'>
-    <!--返回按钮，用hidden属性来控制显示与否 -->
+
+   <!--返回按钮，用hidden属性来控制显示与否 -->
     <view class='goBack' bindtap='goBack' style="padding-top:{{statusBarHeight}}px;" hidden='{{!showIcon}}'>
-      <!-- <text class="iconfont icon-ic_return" bind:tap="back"></text> -->
-      <image src='back.png'></image>
+       <!-- <text class="iconfont icon-ic_return" bind:tap="goBack"></text>  -->
+      <image class="goBack img" src='back.png'></image>
+      <!-- <image src='back.png'></image> -->
     </view>
     <!-- 根据是否启用透明样式来决定是否追加tabbar2样式（透明），并将导航设置为能指定方向的渐变色 -->
     <view class="tabar {{isTransparent ? 'tabar2':''}}"
       style="padding-top:{{statusBarHeight}}px; background-color:{{backgroundColor}}; {{nav.linearGradient(linearGradient,direction,colors)}}">
+      
+      <!--返回按钮，用hidden属性来控制显示与否 -->
+      <!-- <view class='goBack' style="padding-top:{{statusBarHeight}}px;" hidden='{{!showIcon}}'>
+        <text class="iconfont icon-ic_return" bind:tap="goBack"></text>
+      </view> -->
+      <!-- <view class='goBack' bindtap='goBack' style="padding-top:{{statusBarHeight}}px;" hidden='{{!showIcon}}'> -->
+      <!-- <view hidden='{{!showIcon}}'>
+        <text class="iconfont icon-ic_return" bind:tap="goBack"></text>
+      </view> -->
+      <!-- <image class="goBack img" src='back.png'></image> -->
+    <!-- </view> -->
+
       <!-- 标题 -->
       <text style="color:{{titleColor}};">{{title}}</text>
     </view>

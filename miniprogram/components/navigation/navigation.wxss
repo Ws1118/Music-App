@@ -10,10 +10,18 @@
   top: 15rpx;
   font-size: 12pt;
 }
+.icon-ic_return {
+  position: absolute;
+  left: 25rpx;
+  bottom: 6px;
+  font-size: 32px;
+  color: #f6f6f6;
+}
 .navigation.status-bar.goBack image {
   width: 36rpx;
   height: 36rpx;
   padding:12rpx 40rpx 0 30rpx;
+  /* font-size: 1rpx; */
 }
 .navigation.status-bar .tabar {
   display: flex;

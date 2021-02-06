@@ -7,11 +7,17 @@
 }
 .icon-bianxie1 {
   position: relative;
-  top: 6rpx;
+  top: 10rpx;
   bottom: 6px;
   font-size: 30px;
   color: #000000c0;
 }
 .right {
   margin-top: 6rpx;
+}
+
+.container {
+  margin-top: 10rpx;
+  box-sizing: border-box;
+  height: 100vh;
 }
