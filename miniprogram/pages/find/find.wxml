@@ -1,19 +1,30 @@
 <!-- 自定义导航 -->
-<navigation class="nav" showIcon='{{false}}' isTransparent='{{true}}' title='发现'></navigation>
+<navigation showIcon='{{false}}' isTransparent='{{true}}' title='发现'></navigation>
 <!-- 顶部搜索区 -->
 <view class="header">
-    <view bind:tap="onPublish">
+    <view class="publish-container" bind:tap="onPublish">
         <!-- 左侧的发布图标 -->
         <i class="iconfont icon-bianxie1"></i>
     </view>
-    <view class="right">
+    <view class="search-container">
         <!-- 引入搜索组件，接收子组件回传得search方法 -->
-        <x-search bind:search="onSearch"/>
+        <!-- <x-search bind:search="onSearch"/> -->
+        <x-search/>
     </view>
 </view>
 
-<scroll-view class="container" scroll-y>
-    <!-- 弹出层 -->
-    <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+<!-- 博客卡片列表 -->
+<view class="container">
+    <block wx:for="{{blogList}}" wx:key="_id">
+        <view class="blog-panel">
+            <x-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goComment" />
+        </view>
+    </block>
+</view>
+
+<!-- <scroll-view class="container" scroll-y> -->
+    <!-- 底部弹出层 -->
+    <!-- <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
     </x-login>
-</scroll-view>
+</scroll-view>  -->
+    <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail"/>

@@ -37,7 +37,6 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "appid": "wxcfcf0e94ef634809",
   "projectname": "Music",
   "libVersion": "2.14.1",
   "condition": {
