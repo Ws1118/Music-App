@@ -2,28 +2,24 @@ page {
   background-color: #EDEDED;
 }
 
-.header {
-  position: fixed;
-  left: 0;
-  width: 100%;
-  height: 88rpx;
+.ctrl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 99;
-  background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-left: 20rpx;
-  padding-right: 20rpx;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #F5F5F5;
 }
 
-.publish-container {
-  width: 64rpx;
-  height: 64rpx;
+.ctrl .ctrl-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 68rpx;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,33 +31,20 @@ page {
           justify-content: center;
 }
 
-.publish-container .icon-bianxie1 {
-  font-size: 48rpx;
-  color: #4B4B4B;
+.iconfont {
+  margin-right: 20rpx;
+  font-size: 32rpx;
 }
 
-.search-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 20rpx;
-  margin-top: 80rpx;
-}
-
-.blog-panel {
-  margin-bottom: 20rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.item {
+  color: #000;
+  font-size: 32rpx;
+  font-weight: 400;
 }
 
 .share-btn {
-  background-color: #D2B48C;
-  color: #FF6347;
+  background-color: #F5F5F5;
+  color: #000;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,4 +75,4 @@ page {
   right: 20rpx;
   bottom: 20rpx;
 }
-/*# sourceMappingURL=find.css.map */
+/*# sourceMappingURL=blog-ctrl.css.map */

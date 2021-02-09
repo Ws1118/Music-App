@@ -8,8 +8,7 @@
     </view>
     <view class="search-container">
         <!-- 引入搜索组件，接收子组件回传得search方法 -->
-        <!-- <x-search bind:search="onSearch"/> -->
-        <x-search/>
+        <x-search bind:search="onSearch"/>
     </view>
 </view>
 
@@ -21,10 +20,7 @@
         </view>
     </block>
 </view>
-
-<!-- <scroll-view class="container" scroll-y> -->
-    <!-- 底部弹出层 -->
-    <!-- <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
-    </x-login>
-</scroll-view>  -->
-    <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail"/>
+    <!-- 发布使用授权登录组件 -->
+<x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginsuccess" bind:loginfail="onLoginfail" />
+    <!-- 评论使用授权登录组件 -->
+<x-login modalShow="{{loginShow}}" bind:loginsuccess="onLoginsuccess" bind:loginfail="onLoginfail" />
