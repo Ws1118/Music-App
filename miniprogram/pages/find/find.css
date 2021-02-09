@@ -7,16 +7,11 @@ page {
   left: 0;
   width: 100%;
   height: 88rpx;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   z-index: 99;
   background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding-left: 20rpx;
   padding-right: 20rpx;
 }
@@ -24,15 +19,9 @@ page {
 .publish-container {
   width: 64rpx;
   height: 64rpx;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .publish-container .icon-bianxie1 {
@@ -41,55 +30,16 @@ page {
 }
 
 .search-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 20rpx;
   margin-top: 80rpx;
 }
 
 .blog-panel {
   margin-bottom: 20rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-.share-btn {
-  background-color: #D2B48C;
-  color: #FF6347;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-left: 1px solid #ccc;
-}
-
-.comment-content {
-  width: 560rpx;
-  text-align: left;
-  padding: 20rpx;
-  font-size: 32rpx;
-}
-
-.send {
-  display: block;
-  width: 180rpx;
-  height: 64rpx;
-  line-height: 64rpx;
-  background: #5F95A5;
-  color: #2F4F4F;
-  font-size: 32rpx;
-  border-radius: 10rpx;
-  position: absolute;
-  right: 20rpx;
-  bottom: 20rpx;
-}
-/*# sourceMappingURL=find.css.map */

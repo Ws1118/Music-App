@@ -6,7 +6,8 @@
     "pages/musiclist/musiclist",
     "pages/player/player",
     "pages/publish/publish",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/blog-detail/blog-detail"
   ],
   "requiredBackgroundModes": [
     "audio"
