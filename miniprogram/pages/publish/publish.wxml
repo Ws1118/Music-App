@@ -6,7 +6,7 @@
 
   <view class="image-list">
     <!-- 显示图片，可以预览和删除 -->
-    <block wx:for="{{blog.imgs}}" wx:key="index">
+    <block wx:for="{{images}}" wx:key="*this">
       <view class="image-wrap">
         <image class="image" src="{{item}}" mode="aspectFill" catch:tap="onPreviewImage" data-imgsrc="{{item}}" data-imgs="{{blog.imgs}}"></image>
         <i class="iconfont icon-shanchu" bind:tap="onDelImage" data-index="{{index}}"></i>
