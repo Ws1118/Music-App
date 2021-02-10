@@ -8,6 +8,9 @@ AppSecret:62b11ab6025c17349e0de9104174ab4d
 
 环境ID：wangs-8god2agcd87d8668
 
+准备环境：在D:\NeteaseCloudMusicApi 目录下 cmd输入node app.js
+          uTools内网穿透
+
 ## 小程序准备
 
 - 填写小程序注册信息（保存小程序的AppID和AppSecret）
