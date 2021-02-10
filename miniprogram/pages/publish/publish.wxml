@@ -1,5 +1,3 @@
-<navigation class="nav" showIcon='{{false}}' isTransparent='{{true}}' title='发布'></navigation>
-<!-- <navigation showIcon='{{false}}' isTransparent='{{true}}' direction="top" title='发布'></navigation> -->
 <view class="container">
   <textarea class="content" placeholder="分享新鲜事..." bindinput="onInput" maxlength="140" 
   auto-focus bindfocus="onFocus" bindblur="onBlur"></textarea>

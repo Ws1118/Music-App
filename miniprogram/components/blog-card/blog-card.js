@@ -1,6 +1,5 @@
 import formatTime from "../../utils/formatTime.js"
 
-// components/blog-card/blog-card.js
 Component({
   /**
    * 组件的属性列表
@@ -20,9 +19,7 @@ Component({
     }
   },
 
-  /**
-   * 组件的初始数据
-   */
+
   data: {
     _createTime: ''
   },

@@ -49,6 +49,7 @@
   transform: rotate(-15deg);
   transform-origin: 24rpx 10rpx;
   transition: transform 0.8s ease;
+  /* transform: rotate(0deg); */
 }
 
 .playing.player-disc::after{
@@ -111,4 +112,14 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 24%;
+}
+
+/* 返回箭头 */
+.icon-ic_return {
+  position: absolute;
+  left: 25rpx;
+  top: 96rpx;
+  font-size: 32px;
+  color: #fff;
+  z-index: 1003;
 }

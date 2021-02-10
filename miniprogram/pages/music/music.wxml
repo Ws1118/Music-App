@@ -1,7 +1,4 @@
-<!-- 自定义导航组件 -->
-<!-- <view class="header" style="opacity:{{1-opacity}}; padding-top: {{40 + 44}}px"> -->
-  <!-- <navigation showIcon='{{false}}' title='首页'></navigation> -->
-  <view class="header">
+<view class="header">
   <view style="padding-top:{{statusBarHeight + 44}}px;opacity:{{1-opacity}};">
     <input type="text" class="search-input" placeholder="{{placeholder}}" />
     <text class="iconfont icon-sousuo"></text>

@@ -1,5 +1,3 @@
-<navigation isTransparent='{{true}}' title='{{title}}'></navigation>
-
 <!-- 全屏毛玻璃效果 -->
 <view wx:if="{{picUrl}}" class="player-container" style="background:url({{picUrl}}) center/cover no-repeat">
 </view>

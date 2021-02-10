@@ -1,6 +1,7 @@
 <!-- 自定义导航，默认带返回图标 -->
-<navigation showIcon='{{false}}' isTransparent='{{true}}' title='详情'></navigation>
-<scroll-view scroll-y class="container" style="top:{{statusBarHeight + 44 }}px;">
+<!-- <navigation showIcon='{{false}}' isTransparent='{{true}}' title='详情'></navigation> -->
+<!-- <scroll-view scroll-y class="container" style="top:{{statusBarHeight + 44 }}px;"> -->
+<scroll-view scroll-y class="container" style="top:{{statusBarHeight - 44}}px;">
   <!-- 顶部博客卡片 -->
   <view class="blog-card">
     <x-blog-card blog="{{blog}}"></x-blog-card>

@@ -1,26 +1,30 @@
-<navigation showIcon='{{false}}' isTransparent='{{true}}' title='我的'></navigation>
+<!-- <navigation showIcon='{{false}}' isTransparent='{{true}}' title='我的'></navigation> -->
+<view class="profile-header">
+  <view class="avatar">
+    <!-- 使用open-data来获得头像和昵称 -->
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="nickname"></open-data>
+</view>
 
-<view class='container '> 
-  <view bindtap="bindViewTap" class="userinfo">  
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"/>  
-  </view>  
-  <view class="login-from">
-  
-    <!--账号-->  
-    <view class="inputView">   
-      <label class="loginLab">账号:</label> 
-      <input class="inputText" placeholder="请输入账号" bindinput="phoneInput" /> 
+<view class="nav">
+  <view class="nav-item">
+    <!-- navigator可以方便地实现页面跳转，这里把hover-class置为none，去掉点击变灰效果，自己可以尝试下（类似网页a标签地处理） -->
+    <navigator class="content" hover-class="none" url="/pages/play-history/play-history">
+      <text class="text">最近播放</text>
+      <i class="iconfont icon-youbian"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/profile-blog/profile-blog">
+      <text class="text">我的博客</text>
+      <i class="iconfont icon-youbian"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <view class="content" bind:tap="onTapQrCode">
+      <text class="text">小程序码</text>
+      <i class="iconfont icon-youbian"></i>
     </view>
-  
-    <!--密码--> 
-    <view class="inputView">  
-      <label class="loginLab">密码:</label>  
-      <input class="inputText" password="true" placeholder="请输入密码"  bindinput="passwordInput"/>  
-    </view>
-  
-    <!--按钮--> 
-    <view class="loginBtnView">  
-      <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}"  plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>  
-    </view> 
-  </view> 
+  </view>
 </view>

@@ -7,20 +7,21 @@
     "pages/player/player",
     "pages/publish/publish",
     "pages/test/test",
-    "pages/blog-detail/blog-detail"
+    "pages/blog-detail/blog-detail",
+    "pages/play-history/play-history",
+    "pages/profile-blog/profile-blog"
   ],
   "requiredBackgroundModes": [
     "audio"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarBackgroundColor": "#539aaa",
     "navigationBarTitleText": "云音乐",
-    "navigationBarTextStyle": "white",
-    "navigationStyle": "custom"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#474747",
-    "selectedColor": "#d43c33",
+    "selectedColor": "#539aaa",
     "list": [
       {
         "pagePath": "pages/music/music",
